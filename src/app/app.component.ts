@@ -16,5 +16,10 @@ export class AppComponent {
   posts: Post[] = [
     {title: 'Хочу выучить Angular компоненты', text: 'Я все еще учу компоненты', id: 1},
     {title: 'Следующий блок', text: 'Будет про директивы и еще про пайпы', id: 2}
-    ];
+  ];
+
+  updatePosts(post: Post): void {
+    this.posts.unshift(post);
+    // console.log('Post: ', post);
+  }
 }
